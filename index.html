@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON BOMB X : MECHA CORE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+
+<div class="container">
+
+    <h1>⚡ NEON BOMB X ⚡</h1>
+
+    <div class="hud">
+
+        <div class="difficulty-box">
+            <label>難度：</label>
+            <select id="difficulty" onchange="setDifficulty()">
+                <option value="100">Easy</option>
+                <option value="500" selected>Normal</option>
+                <option value="1000">Hard</option>
+            </select>
+        </div>
+
+        <div class="info-grid">
+            <div>範圍：<span id="min">1</span> ~ <span id="max">500</span></div>
+            <div>分數：<span id="score">0</span></div>
+            <div>步數：<span id="steps">0</span></div>
+            <div>狀態：ONLINE</div>
+        </div>
+
+        <input type="number" id="guess" placeholder="輸入數字">
+
+        <div class="buttons">
+            <button onclick="checkGuess()">LOCK TARGET</button>
+            <button onclick="restartGame()">REBOOT</button>
+        </div>
+
+        <p id="message">SYSTEM READY...</p>
+
+        <div class="history">
+            <h3>DATA LOG</h3>
+            <ul id="historyList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
